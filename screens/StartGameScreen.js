@@ -6,6 +6,7 @@ import Input from '../components/Input';
 import Colors from '../constants/colors';
 import NumberContainer from '../components/NumberContainer';
 import BodyText from '../components/BodyText';
+import MainButton from '../components/MainButton';
 
 
 const StartGameScreen = props => {
@@ -46,7 +47,12 @@ const StartGameScreen = props => {
             <Card style={styles.summaryContainer}>
                 <BodyText>You selected</BodyText>
                 <NumberContainer>{selectedNumber}</NumberContainer>
-                <Button title= "START GAME!" color={Colors.primary} onPress={()=> props.onStartGame(selectedNumber)}/>
+                <MainButton
+                    title="START GAME!"
+                    color={Colors.primary}
+                    onPress={() => props.onStartGame(selectedNumber)}>
+                    Start Game
+                </MainButton>
             </Card>
         );
     }
