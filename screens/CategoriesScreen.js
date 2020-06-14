@@ -4,7 +4,7 @@ import { CATEGORIES } from '../data/dummy-data';
 import CategoryGridTile from '../components/CategoryGridTile';
 
 const CategoriesScreen = props => {
-    const renderGridItem = (itemData) => {
+    const renderGridItem = itemData => {
         return (<CategoryGridTile
             title={itemData.item.title}
             color={itemData.item.color}
